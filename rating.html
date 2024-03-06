@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>The HotHub of Sauce</title>
+</head>
+<style>
+    body {
+
+        color: whitesmoke;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+        background-color: black;
+    }
+
+    .container {
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        padding: 38px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .wrapper {
+        width: 50%;
+        height: 50%;
+
+    }
+
+    .img1 {
+        width: 185px;
+        height: 200px;
+    }
+
+    .img2 {
+        width: 265px;
+        height: 220px;
+        margin-left: -50px;
+    }
+
+    .img3 {
+        width: 265px;
+        height: 230px;
+        margin-left: -50px;
+    }
+
+    .img4 {
+        width: 265px;
+        height: 230px;
+        margin-left: -50px;
+    }
+
+    .img5 {
+        width: 265px;
+        height: 230px;
+        margin-left: -50px;
+    }
+
+    h1 {
+        font-family: 'Righteous', sans-serif;
+        color: rgba(255, 255, 255, 0.98);
+        text-transform: uppercase;
+        font-size: 2.4rem;
+    }
+
+    p {
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size: 0.8rem;
+        line-height: 150%;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .left {
+        font-size: 15px;
+    }
+
+    .mid {
+        font-size: 25px;
+    }
+
+    .nav-link {
+        display: flex;
+        justify-content: center;
+        margin: 3px;
+        font-family: "Cinzel", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        color: white;
+        font-size: 20px;
+    }
+
+    .bn47 {
+        position: relative;
+        padding: 1rem 2rem 0.5rem 2.5rem;
+        color: black;
+        border: 5px solid red;
+        -webkit-transition: padding 0.3s ease-in-out;
+        transition: padding 0.3s ease-in-out;
+    }
+
+    .bn47:before {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        z-index: -2;
+        height: 100%;
+        width: 100%;
+        background-color: #d10505;
+        border-right: 3px solid green;
+        border-bottom: 3px solid green;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .bn47:hover {
+        padding: 0.75rem 2.25rem;
+    }
+
+    .bn47:hover:before {
+        top: 0;
+        left: 0;
+    }
+
+    .nav-link {
+        margin-right: 80px;
+        padding: 10px;
+        margin-left: 100px;
+    }
+
+    .app {
+        display: grid;
+        place-items: center;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    .rating_average {
+        width: 100%;
+        background-color: rgb(29, 28, 28);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .rating_average .star-outer {
+        position: relative;
+        display: inline-block;
+    }
+
+    .rating_average .star-outer::before {
+        content: "\2605 \2605 \2605 \2605 \2605";
+        color: #fff8;
+    }
+
+    .rating_average .star-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        overflow: hidden;
+    }
+
+    .rating_average .star-inner::before {
+        content: "\2605 \2605 \2605 \2605 \2605";
+        color: gold;
+    }
+
+    .rating_progress {
+        width: 70%;
+    }
+
+    .rating_average p {
+        margin-top: .7rem;
+        letter-spacing: .1rem;
+    }
+
+    .rating_progress-value {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        column-gap: 1rem;
+    }
+
+    .rating_progress-value .star {
+        font-size: 20px;
+        color: goldenrod;
+    }
+
+    .rating_progress-value p:last-child {
+        width: 10%;
+    }
+
+    .rating_progress .progress {
+        flex: 1 1 0;
+        height: .5rem;
+        border-radius: .5rem;
+        background-color: #ff02;
+    }
+
+    .bar {
+        height: 100%;
+        width: 250px;
+        background-color: gold;
+        border-radius: .5rem;
+    }
+</style>
+
+<body>
+    <br />
+
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: whitesmoke;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active text-black" aria-current="page" href="hothub.html">Home</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="collection.html">Collection</a>
+                    </li>
+
+                    <li class="nav-item"></li>
+                    <a class="nav-link bn47 text-decoration-none text-black fw-bolder" href="#"><span
+                            class="left">Saucy</span><span class="mid text-danger">Hot</span><span
+                            class="left">Hub</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="gallery.html">Gallery</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="rating.html">Ratings</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br />
+
+    <section id="testimonials">
+        <div class="testimonial-heading text-center">
+            <span class="text-light fw-bolder"><strong>RATINGS</strong></span>
+            <h1 class="text-black fw-bolder border border-light bg-light rounded-5">What others say</h1>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="wrapper row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <img src="C:\Users\bless\Downloads\sauce.jpg" class="img-fluid img1 ">
+                </div>
+                <div class="col-sm-6">
+                    <div class="app">
+                        <div class="rating">
+                            <div class="rating_average">
+                                <h1>4.8</h1>
+                                <div class="star-outer">
+                                    <div class="star-inner"></div>
+                                </div>
+                                <p>290,291</p>
+                            </div>
+                            <div class="rating_progress d-none d-lg-block">
+                                <div class="rating_progress-value">
+                                    <p> <span class="star"></span></p>
+                                    <div class=" progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <img src="C:\Users\bless\Downloads\xxsauce.jpeg" class="img2">
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="app">
+                        <div class="rating">
+                            <div class="rating_average">
+                                <h1>4.8</h1>
+                                <div class="star-outer">
+                                    <div class="star-inner">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                </div>
+                                <p>290,291</p>
+                            </div>
+                            <div class="rating_progress d-none d-lg-block">
+                                <div class="rating_progress-value">
+                                    <p>5 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>89,783</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>4 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>49,783</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>3 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>25,050</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>2 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>10,070</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>1 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>5,020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <img src="C:\Users\bless\Downloads\sauce5.webp" class="img3">
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="app">
+                        <div class="rating">
+                            <div class="rating_average">
+                                <h1>4.9</h1>
+                                <div class="star-outer">
+                                    <div class="star-inner">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                </div>
+                                <p>123,706</p>
+                            </div>
+                            <div class="rating_progress d-none d-lg-block">
+                                <div class="rating_progress-value">
+                                    <p>5 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>42,783</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>4 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>40,783</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>3 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>25,050</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>2 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>10,070</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>1 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>5,020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <img src="C:\Users\bless\Downloads\sauce4.jpg" class="img4">
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="app">
+                        <div class="rating">
+                            <div class="rating_average">
+                                <h1>4.1</h1>
+                                <div class="star-outer">
+                                    <div class="star-inner">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                </div>
+                                <p>192,750</p>
+                            </div>
+                            <div class="rating_progress d-none d-lg-block">
+                                <div class="rating_progress-value">
+                                    <p>5 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>91,658</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>4 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>36,752</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>3 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>45,150</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>2 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>12,370</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>1 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>6,820</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <img src="C:\Users\bless\Downloads\sauce3.jpg" class="img5">
+                </div>
+                <div class="col-6">
+                    <div class="app">
+                        <div class="rating">
+                            <div class="rating_average">
+                                <h1>4.9</h1>
+                                <div class="star-outer">
+                                    <div class="star-inner">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                </div>
+                                <p>150,219</p>
+                            </div>
+                            <div class="rating_progress d-none d-lg-block">
+                                <div class="rating_progress-value">
+                                    <p>5 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>63,783</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>4 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>51,420</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>3 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>25,650</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>2 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>7,356</p>
+                                </div>
+                                <div class="rating_progress-value">
+                                    <p>1 <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar"></div>
+                                    </div>
+                                    <p>2,010</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let data = [
+                {
+                    'star': 5,
+                    'count': 99980,
+                },
+                {
+                    'star': 4,
+                    'count': 39300,
+                },
+                {
+                    'star': 3,
+                    'count': 25050,
+                },
+                {
+                    'star': 2,
+                    'count': 10070,
+                },
+                {
+                    'star': 1,
+                    'count': 5020,
+                }
+            ]
+
+            let total_rating = 0;
+            rating_based_on_stars = 0;
+
+            data.forEach((rating, index) => {
+                total_rating += rating.count;
+                rating_based_on_stars += rating.count * rating.star;
+            });
+
+            let rating_progress = "";
+            data.forEach(rating => {
+                rating_progress += `
+         <div class="rating_progress-value">
+                                    <p>${rating.star} <span class="star">&#9733;</span></p>
+                                    <div class="progress">
+                                        <div class="bar" style="width:${(rating.count / total_rating) * 100}%;"></div>
+                                    </div>
+                                    <p>${rating.count.toLocaleString()}</p>
+                                </div>`;
+            });
+            let divs = document.getElementsByClassName("div");
+            document.querySelector('.rating_progress').innerHTML += rating_progress;
+
+            let rating_average = (rating_based_on_stars / total_rating).toFixed(1);
+            document.querySelector('.rating_average h1').innerHTML = rating_average;
+            document.querySelector('.rating_average p').innerHTML = total_rating.toLocaleString();
+            document.querySelector('.star-inner').style.width = (rating_average / 5) * 100 + "%";
+        });
+
+    </script>
+
+    <strong>
+        <footer class="text-center text-light">This project is coded by Blessed and
+            open-sourced on <a class="text-decoration-none" href="https://github.com/Blessedbrita">GitHub</a>
+        </footer>
+    </strong>
+</body>
+
+</html>
