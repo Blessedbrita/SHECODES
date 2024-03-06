@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰Money Management💰</title>
+
+    <style>
+        .header {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            color: gold;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: small;
+        }
+
+        h2 {
+            text-align: center;
+            display: block;
+            font-size: 35px;
+            color: orangered;
+        }
+
+        .container {
+            font-style: inherit;
+            font-size: 12px;
+            margin-bottom: 70px;
+            color: whitesmoke;
+        }
+
+
+        .photo1 {
+            border-radius: 50%;
+            margin-right: 10px;
+            float: left;
+            width: 20%;
+            height: 15%;
+            margin-bottom: 10px;
+        }
+
+        .photo2 {
+            border-radius: 50%;
+            float: right;
+            width: 30%;
+            font-display: block;
+            height: 30%;
+            margin-left: 10px;
+
+        }
+
+        .photo3 {
+            border-radius: 50%;
+            float: left;
+            width: 30%;
+            height: 20%;
+            margin-right: 10px;
+        }
+
+
+        .out {
+            text-align: right;
+            display: block;
+            justify-content: center;
+
+        }
+
+        .out::before {
+            justify-content: center;
+            display: table;
+            clear: both;
+            padding: 20px;
+
+        }
+
+        .in::before {
+            content: "";
+            display: table;
+            clear: both;
+            position: center;
+            width: 50%;
+        }
+
+        p {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            text-wrap: 50%;
+        }
+
+        .total {
+            border: black;
+            background: black;
+            position: center;
+        }
+
+        body {
+            background-color: black;
+            padding: 10px;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            background: orangered;
+            color: black;
+            font-size: 16px;
+            font-style: oblique;
+            line-height: 22px;
+            padding: 16px 24px;
+            border-radius: 30px;
+            transition: all 200ms ease-in-out;
+            box-shadow: rgba(233, 233, 239, 0.08) 0px 8px 8px 0;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        button:hover {
+            color: black;
+            border: beige;
+            background: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="total">
+        <h1 class="header">
+            HALL <br />
+            OF<br />
+            💰FINANCE💰
+        </h1>
+
+        <h2>
+            HOW ARE YOU MANAGING YOUR POCKET?
+        </h2>
+        <div class="container">
+            <div class="in">
+                <a target="blank"
+                    href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/065/original/income_pic.jpeg?1706693789">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/065/original/income_pic.jpeg?1706693789"
+                        width="300" height="200" class="photo1">
+                </a>
+                <p>
+                <h3>INCOME</h3> Managing your finances is an essential aspect of financial freedom.
+                Handling it wisely
+                will
+                save you from
+                financial stress. Creating a monthly budget is the best way to keep track of your
+                finances.<br />
+                <strong><em>Top tip: It is to create a budget that reflects your goals and
+                        financial situation.</em></strong>
+                </p>
+            </div>
+            <div class="out">
+                <a target="blank"
+                    href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/066/original/expense_pic.jpeg?170669384">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/066/original/expense_pic.jpeg?170669384"
+                        width="300" height="200" class="photo2">
+                </a>
+                <p>
+                <h3>EXPENSES</h3>Effectively managing your finances is crucial as this limit unnecessary spending. The
+                best
+                approach is
+                prioritising your needs first, and being mindful of your wants. Review your monthly expenses to keep
+                track
+                and identify non-essential expenditure that can be cut. Reassess your financial situation and adjust
+                your
+                budget to your financial goals.</p>
+            </div>
+            <div class="save">
+                <a target="_blank"
+                    href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/067/original/savings_pic.jpeg?1706693892">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/067/original/savings_pic.jpeg?1706693892"
+                        class="photo3">
+                </a>
+                <p>
+                <h3>SAVINGS</h3> Rule 1: As your income increases, increase in investing and savings! Managing your
+                savings is
+                crucial for
+                building financial security and achieving your long-term goals. Here, it is where you need to befriend a
+                financial advisor that will help you with plans that fit your financial needs.</p>
+            </div>
+        </div>
+
+        <button>
+            <strong>myFinances</strong>
+        </button>
+    </div>
+    <script>
+        function myFinances() {
+            let income = prompt("What is your total monthly income after deductions?");
+            let expenses = prompt("What are your total monthly expenses?");
+            let h2 = document.querySelector("h2");
+
+            if (income - expenses > 0) {
+                h2.innerHTML = "👏<br/>" + "You are managing your finances WELL!";
+            } else {
+                h2.innerHTML = "😞<br/>" + "You need to IMPROVE on managing your finances❗";
+            }
+        }
+
+        let myButton = document.querySelector("button");
+        myButton.addEventListener("click", myFinances);
+    </script>
+</body>
+
+</html>
