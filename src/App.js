@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <h1>Weather App</h1>
       <SearchEngine />
-      <h2></h2>
+      <h2>Hello there...</h2>
 
       <footer>This project is coded by {""}
         <a href="https://github.com/Blessedbrita">Blessed</a>,
