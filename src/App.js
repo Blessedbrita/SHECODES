@@ -12,7 +12,8 @@ export default function App() {
         <a href="https://github.com/Blessedbrita">Blessed</a>,
         open-sourced on {""}
         <a href="https://github.com/Blessedbrita/SHECODES/tree/master">GitHub</a> {""}
-        and hosted on Netlify
+        and hosted on {""}
+        <a href="https://65f2176c0b46710008a21689--genuine-parfait-31d715.netlify.app/">Netlify</a>
       </footer>
     </div>
   );
