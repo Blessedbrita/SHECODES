@@ -25,3 +25,8 @@ h1 {
     background-color: black;
     color: skyblue;
 }
+
+footer {
+    text-align: center;
+    font-weight: 600;
+}
