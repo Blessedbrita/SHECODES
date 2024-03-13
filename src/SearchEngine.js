@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate"
 
 export default function SearchEngine() {
     let [city, setCity] = useState(" ");
@@ -9,6 +10,7 @@ export default function SearchEngine() {
     function displayWeather(response) {
         setLoaded(true);
         setWeather({
+            date: new Date(response.data.dt * 1000),
             temperature: response.data.main.temp,
             wind: response.data.wind.speed,
             humidity: response.data.main.humidity,
@@ -46,6 +48,8 @@ export default function SearchEngine() {
         return (
             <div>
                 {form}
+                <br />
+                <FormattedDate date={weather.date} />
                 <br />
                 Temperature: {Math.round(weather.temperature)}°C
                 <br />
